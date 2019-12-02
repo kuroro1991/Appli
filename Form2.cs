@@ -188,5 +188,14 @@ namespace Appli
             textBox1.Text = temp_str1;
             textBox2.Text = temp_str2;
         }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                e.Cancel = true;
+                this.Hide();
+            }
+        }
     }
 }
